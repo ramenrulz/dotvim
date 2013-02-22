@@ -2,13 +2,25 @@ set ruler
 set number
 
 set background=dark
+set mouse=a
+set mousehide
+set history=1000
 set hlsearch
 
-set softtabstop=2
-set tabstop=2
-set shiftwidth=2
+set ignorecase
+set smartcase
+set wildmenu
+set wildmode=list:longest,full
+set foldenable
+
+
+set nowrap
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
 set expandtab
 set autoindent
+
 execute pathogen#infect()
 filetype plugin indent on
 syntax on
