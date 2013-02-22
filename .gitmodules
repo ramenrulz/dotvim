@@ -13,3 +13,12 @@
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = http://github.com/kien/ctrlp.vim.git
+[submodule "bundle/easymotion"]
+	path = bundle/easymotion
+	url = http://github.com/Lokaltog/vim-easymotion.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = http://github.com/vim-scripts/Gundo.git
+[submodule "bundle/abolish"]
+	path = bundle/abolish
+	url = http://github.com/tpope/vim-abolish.git
