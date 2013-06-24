@@ -13,16 +13,18 @@ set wildmode=list:longest,full
 set foldenable
 
 set nowrap
-set softtabstop=4
-set tabstop=4
-set shiftwidth=4
+set softtabstop=2
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
+
+let g:Tex_DefaultTargetFormat='pdf'
 
 execute pathogen#infect()
 filetype plugin indent on
 
 syntax enable
-set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
+"set background=dark
+"let g:solarized_termcolors=256
+colorscheme desert
