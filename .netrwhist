@@ -1,3 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/taylorak/workspace/python/event_calendar/static'
+let g:netrw_dirhist_2='/home/taylorak/.vim/bundle/snipmate/snippets'
+let g:netrw_dirhist_3='/home/taylorak/.vim/bundle/snipmate/plugin'
+let g:netrw_dirhist_4='/home/taylorak/workspace/python/event_calendar/events'
+let g:netrw_dirhist_5='/home/taylorak/workspace/python/event_calendar/events/templates/calendars'
+let g:netrw_dirhist_6='/home/taylorak/workspace/python/event_calendar/events/templatetags'
+let g:netrw_dirhist_7='/home/taylorak/.vim'
