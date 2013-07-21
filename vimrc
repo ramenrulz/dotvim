@@ -1,6 +1,5 @@
 set ruler
 set number 
-set mouse=a
 set mousehide
 set history=1000
 set hlsearch
@@ -38,4 +37,5 @@ filetype plugin indent on
 syntax enable
 "set background=dark
 "let g:solarized_termcolors=256
+au BufNewFile,BufRead *.less set filetype=less " For Less
 colorscheme desert
