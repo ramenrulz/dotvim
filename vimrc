@@ -1,4 +1,8 @@
+execute pathogen#infect()
+
 set nocompatible
+set t_Co=256
+set encoding=utf8
 set ruler
 set number 
 set mouse=vi
@@ -9,13 +13,22 @@ set history=1000
 set ignorecase
 set nohlsearch "turn off highlighting for searches
 set incsearch "highlight as we search
-"set showmatch
 set smartcase
+"set showmatch
 
 set wildmenu
 set wildmode=list:longest,full
-set foldenable 
 set nowrap
+
+"no backups
+set nobackup
+set noswapfile
+
+"folding settings
+"set foldmethod=syntax "fold based on indent
+"set foldnestmax=10 "deepest fold is 10 levels
+"set nofoldenable "don't fold by default
+"set foldlevel=1 
 
 set softtabstop=4
 set tabstop=4
@@ -23,11 +36,13 @@ set shiftwidth=4
 set expandtab
 set autoindent
 set smartindent
-set textwidth=80
 set backspace=indent,eol,start "better backspace
-"set spell " spellcheck
 set cmdheight=2 " status bar is 2 lines high
+set laststatus=2
+"set textwidth=79
+"set spell " spellcheck
 
+" stop using arrow keys
 nnoremap <up> <nop>
 nnoremap <down> <nop>
 nnoremap <left> <nop>
@@ -36,8 +51,26 @@ inoremap <up> <nop>
 inoremap <down> <nop>
 inoremap <left> <nop>
 inoremap <right> <nop>
-"nnoremap j gj
-"nnoremap k gk
+
+" move up or down by row
+nnoremap j gj
+nnoremap k gk
+
+nnoremap ; :
+
+nnoremap <SID>I_won't_ever_type_this <Plug>IMAP_JumpForward
+
+" easy window navigation
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+map <c-h> <c-w>h
+
+inoremap jj <Esc>
+cnoremap jj <C-c>
+vnoremap v <Esc>
+
+let mapleader=','
 
 "inoremap { {<CR><BS>}<Esc>ko
 "inoremap {      {}<Left>
@@ -56,39 +89,34 @@ inoremap <right> <nop>
 "inoremap []     []
 
 " NERDTree
-map <F2> :NERDTreeToggle<CR><CR>
-let NERDTreeIgnore=['\.pyc$','\~$']
+nmap <F2> :NERDTreeTabsToggle<CR><CR>
+let NERDTreeIgnore=['\.pyc$','\~$','\.pyo$','\.class$','\.o']
 
-nnoremap <SID>I_won't_ever_type_this <Plug>IMAP_JumpForward
-map <c-j> <c-w>j
-map <c-k> <c-w>k
-map <c-l> <c-w>l
-map <c-h> <c-w>h
-let mapleader=','
-
-filetype plugin indent on
-filetype on
-syntax enable
-
-autocmd FileType python set omnifunc=pythoncomplete#Complete
+"Tagbar
+nmap <F3> :TagbarToggle<CR>
 
 " SnipMate
 autocmd FileType python set ft=python.django
 autocmd Filetype html set ft=htmldjango.html
 
-"let g:SuperTabDefaultCompletionType = "context"
-let g:Tex_DefaultTargetFormat='pdf'
-
 " Syntastic
 let g:syntastic_python_checkers = ['flake8','pep8']
 let g:syntastic_python_flake8_args = '--ignor="E501,E302,E261,E701,E241,E126,E127,E128,W801"'
-let g:syntastic_java_checkstyle_conf_file = '/home/taylorak/Downloads/checkstyle.xml'
 
-execute pathogen#infect()
+"Supertab
+"let g:SuperTabMappingForward='<leader><space>'
+"let g:SuperTabDefaultCompletionType="context"
+"let g:SuperTabContextDefaultCompletionType="<c-n>"
+"
+let g:Tex_DefaultTargetFormat='pdf'
+
+filetype on "enable filetype detection
+filetype plugin on "enable filetype-specific plugin
+filetype indent on "enable filetype-specific indentation
 
 au BufNewFile,BufRead *.less set filetype=less " For Less
 
+syntax enable
 set background=dark
 "let g:solarized_termcolors=256
 colorscheme solarized
-set encoding=utf8
