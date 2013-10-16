@@ -1,11 +1,4 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/taylorak/Programming/Lisp/taylorak3'
-let g:netrw_dirhist_2='/home/taylorak/Programming/Python/Django/helloworld/static/css'
-let g:netrw_dirhist_3='/home/taylorak/Programming/Python/Django/helloworld/helloworld/templates'
-let g:netrw_dirhist_4='/home/taylorak/workspace/python/event_calendar/events/templatetags'
-let g:netrw_dirhist_5='/home/taylorak/Programming/Python/Django/helloworld/polls/templates/navbar'
-let g:netrw_dirhist_6='/home/taylorak/Programming/Django/db/templatetags'
-let g:netrw_dirhist_7='/etc/init.d'
-let g:netrw_dirhist_8='/home/taylorak/Programming/C/HelloWorld'
-let g:netrw_dirhist_9='/home/taylorak/Programming/Java/HelloWorld'
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/taylorak/Programming/Java'
+let g:netrw_dirhist_2='/home/taylorak/.vim/.git'

@@ -37,7 +37,7 @@ set expandtab
 set autoindent
 set smartindent
 set backspace=indent,eol,start "better backspace
-set cmdheight=2 " status bar is 2 lines high
+"set cmdheight=2 " status bar is 2 lines high
 set laststatus=2
 "set textwidth=79
 "set spell " spellcheck
@@ -119,4 +119,5 @@ au BufNewFile,BufRead *.less set filetype=less " For Less
 syntax enable
 set background=dark
 "let g:solarized_termcolors=256
-colorscheme solarized
+"colorscheme solarized
+colorscheme molokai
